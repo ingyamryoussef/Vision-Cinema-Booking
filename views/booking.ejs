@@ -1,0 +1,269 @@
+<html lang="en">
+<head>
+    <title>Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="bookingjs.js"></script>
+    <script src="general_js.js"></script>
+    <script>
+      function select_seat(myid)
+      {
+        
+        //if(document.getElementById(myid).style.backgroundColor=='rgba(100, 148, 237, 0.486)')
+          document.getElementById(myid).style.backgroundColor='rgba(68, 180, 115, 0.938)';
+       if(document.getElementById(myid).style.backgroundColor=='rgba(68, 180, 115, 0.938)')
+         {document.getElementById(myid).style.backgroundColor='rgba(100, 148, 237, 0.486)';}
+      }
+      
+    </script>
+
+  </head>
+<body>
+    <!----------------------------Header (Nav bar and logo)------------------------------->
+<header>
+    <nav class="  navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home"><img src="logo3.png" style="width:200px; height: 50px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              </li>
+
+              <li>
+                <div class="dropdown">
+                  <a class="nav-link dropdown-toggle active" role="button" data-toggle="dropdown">  Cateogories
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Packages</a>
+                    <a class="dropdown-item" href="#">Best Reviews</a>
+                  </div>
+                </div>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/about">About Us</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/login">Login</a>
+
+            </ul>
+            <div class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" id="searchh" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit" onclick="search_engine()">Search</button>
+            </div>
+          </div>
+        </div>
+        
+</header>
+
+    <!---------------------------Section--------------------------------->
+<section class="bookingsection">
+    <br>
+    <h1 style="text-align: center; font-size: 70px">Booking</h1>
+    <br>
+    <h2 style="text-align: center; font-size: 40px">Choose your seats</h2>
+
+  <div class="container" style=" width: 70%;">
+    <div class="col-12" style="text-align: center; background-color: rgba(237, 189, 100, 0.486); border-radius: 5px;"> Screen</div>
+    <br><br>
+    <div class="row seats"> <!--in css we will define seats as a parent and its children      .seats a  & .seats a:hover -->
+
+        <div class="col-1"><div class="square" id="s1" onclick="select_seat(this.id);"></div></div>
+        <div class="col-1"><div class="square" id="s2" onclick="select_seat(this.id);"></div></div>
+        <div class="col-1"><div class="square" id="s3" onclick="select_seat(this.id);"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s4" onclick=""></div></div>
+        <div class="col-1"><div class="square" id="s5" onclick="document.getElementById('s5').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s6" onclick="document.getElementById('s6').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s7" onclick="document.getElementById('s7').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s8" onclick="document.getElementById('s8').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s9" onclick="document.getElementById('s9').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+    </div>
+    <br>
+    <div class="row seats"> <!--in css we will define seats as a parent and its children      .seats a  & .seats a:hover -->
+
+        <div class="col-1"><div class="square" id="s10" onclick="document.getElementById('s10').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s11" onclick="document.getElementById('s11').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s12" onclick="document.getElementById('s12').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s13" onclick="document.getElementById('s13').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s14" onclick="document.getElementById('s14').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s15" onclick="document.getElementById('s15').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s16" onclick="document.getElementById('s16').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s17" onclick="document.getElementById('s17').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s18" onclick="document.getElementById('s18').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+    </div>
+    <br>
+    <div class="row seats"> <!--in css we will define seats as a parent and its children      .seats a  & .seats a:hover -->
+
+        <div class="col-1"><div class="square" id="s19" onclick="document.getElementById('s19').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s20" onclick="document.getElementById('s20').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s21" onclick="document.getElementById('s21').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s22" onclick="document.getElementById('s22').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s23" onclick="document.getElementById('s23').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s24" onclick="document.getElementById('s24').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s25" onclick="document.getElementById('s25').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s26" onclick="document.getElementById('s26').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s27" onclick="document.getElementById('s27').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+    </div>
+    <br>
+    <div class="row seats"> <!--in css we will define seats as a parent and its children      .seats a  & .seats a:hover -->
+
+        <div class="col-1"><div class="square" id="s28" onclick="document.getElementById('s28').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s29" onclick="document.getElementById('s29').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s30" onclick="document.getElementById('s30').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s31" onclick="document.getElementById('s31').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s32" onclick="document.getElementById('s32').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s33" onclick="document.getElementById('s33').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+        <div class="col-1"></div>
+
+        <div class="col-1"><div class="square" id="s34" onclick="document.getElementById('s34').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s35" onclick="document.getElementById('s35').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s36" onclick="document.getElementById('s36').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+
+    </div>
+    <br>
+    <div class="row seats"> <!--in css we will define seats as a parent and its children      .seats a  & .seats a:hover -->
+
+        <div class="col-1"><div class="square" id="s37" onclick="document.getElementById('s37').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s38" onclick="document.getElementById('s38').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s39" onclick="document.getElementById('s39').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s40" onclick="document.getElementById('s40').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s41" onclick="document.getElementById('s41').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s42" onclick="document.getElementById('s42').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s43" onclick="document.getElementById('s43').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s44" onclick="document.getElementById('s44').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s45" onclick="document.getElementById('s45').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s46" onclick="document.getElementById('s46').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" id="s47" onclick="document.getElementById('s47').style.backgroundColor='rgb(68, 180, 115)'"></div></div>
+        <div class="col-1"><div class="square" style="text-align: center; background-color: rgba(237, 189, 100, 0.486);">Door</div></div>
+
+    </div>
+    <br>
+  </div>
+  <br><br>
+    <h2 style="text-align: center; font-size: 40px">Choose your tickets type</h2>
+  <br><br>
+  <div class="container" style=" width: 70%;">
+
+    <h3 style="margin-left: 30%;"> Regular (70 L.E) </h3>
+    <br>
+    <img src="regulartheater.jpg" style="width: 40%; height:auto; margin-left: 30%;">
+    <input type="radio" name="tickettype" class="checkmark" checked>
+    <br><br><br><br>
+    <h3 style="margin-left: 30%;"> VIP (130 L.E) </h3>
+    <br>
+    <img src="viptheater.jpg" style="width: 40%; height: auto; margin-left: 30%;" type="radio">
+    <input type="radio" name="tickettype" class="checkmark">
+
+  </div>
+
+  <br><br><br>
+  
+  <div class="container" style=" width: 70%;">
+
+    <h2 style="text-align: center; font-size: 40px">Number of tickets</h2>
+    <br>
+    <input type="number" class="numoftickets" style="margin-left: 45%; border-radius: 10px; height: 50px; font-size: 20px; text-align: center;">
+  </div>
+ <br><br><br>
+  <div class="container" style=" width: 15%; ">
+    <input type="button" class="booktickets" style="width: 100%; color: white; background-color: rgba(87, 171, 226, 0.918); font-size: 30px; border-radius: 10px; padding-bottom: 5px;" value="Book">
+  </div>
+  <br><br>
+  
+
+
+     
+</section> 
+<br/>   
+
+
+    <!---------------------------Footer---------------------------->
+
+    <footer class="bg-light text-center text-primary">
+      <!-- Grid container -->
+      <div class="container p-4 pb-3">
+        <!-- Section: Social media -->
+        <section class="mb-40 bg-light">
+          <!-- Facebook -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="https://www.facebook.com/"
+            role="button" >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+    
+          <!-- Twitter -->
+          <a
+            class="btn btn-info btn-floating m-1"
+            style="background-color: #55acee;"
+            href="https://twitter.com/"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a
+            class="btn btn-danger btn-floating m-1"
+            style="background-color: #dd4b39;"
+            href="https://www.google.com/"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a
+            class="btn btn-secondary btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="https://www.instagram.com/"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright: By Habiba Khaled Abdelfattah & Ingy Amr
+      </div>
+      <!-- Copyright -->
+    </footer>
+</body>
+</html>
